@@ -19,23 +19,23 @@ It exposes read-only endpoints (GET) for nations, factions, characters, bending 
 The database is structured around the Avatar universe with relational integrity.
 
 ### Core Tables
-  nations
-  factions
-  characters
-  locations
-  episodes
-  bending_styles
-  animals
-  weapons
-  languages
-  quotes
+- nations
+- factions
+- characters
+- locations
+- episodes
+- bending_styles
+- animals
+- weapons
+- languages
+- quotes
 
 ### Join Tables
 
-character_factions
-character_bending
-character_weapons
-character_languages
+- character_faction
+- character_bending
+- character_weapons
+- character_languages
 
 ## Example Character Table (SQLAlchemy)
 ```bash
@@ -76,6 +76,7 @@ class Character(Base):
 
 ```bash
 CREATE DATABASE avatar_db;
+```
 
 3. Run the schema script to set up tables
 
@@ -87,19 +88,19 @@ DATABASE_URL=postgresql://user:password@localhost:5432/avatar_api
 
 5. Creat virtual environment and install dependencies:
    
-   ```bash
-   python -m venv venv
-   source venv/bin/activate    # macOS/Linux
-   venv\Scripts\activate       # Windows
-   pip install -r requirements.txt
-   ```
+```bash
+python -m venv venv
+source venv/bin/activate    # macOS/Linux
+venv\Scripts\activate       # Windows
+pip install -r requirements.txt
+```
 
 6. Start the FastAPI server:
 
-   ```bash
-   uvicorn main:app --reload
-   ```
-   The server will start at http://127.0.0.1:8000
+ ```bash
+ uvicorn main:app --reload
+ ```
+The server will start at http://127.0.0.1:8000
 
 ## Example Endpoints
 - GET /api/v1/characters -> List all characters (0 - 20)
