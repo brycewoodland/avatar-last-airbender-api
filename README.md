@@ -103,9 +103,9 @@ pip install -r requirements.txt
 The server will start at http://127.0.0.1:8000
 
 ## Example Endpoints
-- GET /api/v1/characters -> List all characters (0 - 20)
-- GET /api/v1/characters?nationId=4 -> Filter characters by nation
-- GET /api/v1/characters?skip=5&limit=10 -> Pagination
+- **GET /api/v1/characters** -> List all characters (0 - 20)
+- **GET /api/v1/characters?nationId=4** -> Filter characters by nation
+- **GET /api/v1/characters?skip=5&limit=10** -> Pagination
 
 ### Example Response
 
